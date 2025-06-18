@@ -128,6 +128,9 @@
         "name": "Player count",
         "unit_of_measurement": "players"
       },
+      "alarm_next": {
+        "name": "Next alarm"
+      },
       "other_player_count": {
         "name": "Player count off service",
         "unit_of_measurement": "[%key:component::squeezebox::entity::sensor::player_count::unit_of_measurement%]"
