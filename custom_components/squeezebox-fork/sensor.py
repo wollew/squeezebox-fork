@@ -149,7 +149,6 @@ class SqueezeboxSensorEntity(SqueezeboxEntity, SensorEntity):
     @property
     def native_value(self) -> StateType:
         """Sensor value directly from player coordinator."""
-
-        val = getattr(self.coordinator.player, self.description.key, None)
-        _LOGGER.debug("%s %s", self._attr_unique_id, val)
-        return cast(StateType, val)
+        return cast(
+            StateType, getattr(self.coordinator.player, self.description.key, None)
+        )
